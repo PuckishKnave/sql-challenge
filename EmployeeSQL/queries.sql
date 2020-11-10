@@ -1,4 +1,4 @@
-﻿--List the following details of each employee: employee number, last name, first name, sex, and salary.
+﻿-- List the following details of each employee: employee number, last name, first name, sex, and salary.
 SELECT e.emp_no, e.last_name, e.first_name, e.gender, s.salary
 FROM employees AS e LEFT JOIN salaries AS s
 ON e.emp_no=s.emp_no
@@ -24,5 +24,18 @@ INNER JOIN dept_emp AS de
 	ON e.emp_no=de.emp_no
 INNER JOIN departments AS d
 	ON de.dept_no=d.dept_no;
+
+-- List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
+SELECT * FROM employees
+WHERE first_name = 'Hercules' AND last_name like 'B%';
+
+--List all employees in the Sales department, including their employee number, last name, first name, and department name.
+SELECT e.emp_no, e.last_name, e.first_name, d.dept_name
+FROM employees AS e
+LEFT JOIN dept_emp AS de
+	ON e.emp_no=de.emp_no
+INNER JOIN departments AS d
+	ON de.dept_no=d.dept_no
+WHERE d.dept_name='Sales';
 
 --
