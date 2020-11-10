@@ -16,3 +16,5 @@ During this SQL challenge my aim was to create an ERD (Entity Relationship Diagr
 
 8. In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.   
 
+The ERD I created of the CSV files can be seen below:  
+![alt text](https://github.com/PuckishKnave/sql-challenge/blob/main/EmployeeSQL/EmployeeERD.png?raw=true)
